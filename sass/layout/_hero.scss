@@ -5,6 +5,7 @@ body {
   padding: 30px 15px;
   margin: 0;
   background: #f7f7f7!important;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -36,7 +37,7 @@ section.qwiz_title {
     overflow: hidden;
     background: linear-gradient(to top, #f7f7f7, #fbfbfb);
     position: relative;
-    z-index: -2;
+    z-index: 2;
   
   #circle {
     background: $blue;
