@@ -23,12 +23,22 @@ h2 {
 }
 
 .btn {
-  border: none;
+  border: 1px solid #fff;
   background: $blue;
   border-radius: 4px;
   padding: 1em 2em;
   color: #fff;
   font: 1.2rem sans-serif;
+
+  @media screen and (min-width:1200px) {
+    border: none;
+  background: $blue;
+  border-radius: 4px;
+  padding: 1em 2em;
+  color: #fff;
+  font: 1.2rem sans-serif;
+    
+  }
 }
 
 section.qwiz_title {
@@ -50,6 +60,14 @@ section.qwiz_title {
     transition: 5s ease-in-out;
     z-index: -1;
   }
+
+  .mob__none {
+    display: none;
+    @media screen and (min-width:1200px) {
+        display: block;
+        
+    }
+  }
   
   .boxes {
     max-width: $maxW;
@@ -57,10 +75,16 @@ section.qwiz_title {
     z-index: 0;
     
     &__textBox {
+        padding: 5em 1em;
+        font: 1.5em sans-serif;
+      float: left;
+      box-sizing: border-box;
+        @media screen and (min-width:1200px) {
       font: 1.5em sans-serif;
       float: left;
       box-sizing: border-box;
       padding: 5em 3em;
+        }
       
         &_left {
           width: 45%;
@@ -71,7 +95,9 @@ section.qwiz_title {
           }
         }
         &_right {
+            @media screen and (min-width:1200px) {
           width: 55%;
+            }
           h2 {
             margin-top: 0.5em;
           }
