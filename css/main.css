@@ -1024,9 +1024,14 @@ section.qwiz_title .boxes__textBox_right h2 {
 
 body {
   background: #7aa4a9;
-  font-family: "Roboto Slab", serif;
-  font-size: 18px;
   color: #f1f2ec;
+  font-family: "Roboto Slab", serif;
+  font-size: 9px;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 .quizArea {

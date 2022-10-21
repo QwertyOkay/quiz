@@ -3,9 +3,13 @@
  body{
 
 	background: #7aa4a9;
+    color:#f1f2ec;
 	font-family: 'Roboto Slab', serif;
-	font-size: 18px;
-	color:#f1f2ec;
+    font-size: 9px;
+    @media screen and (min-width:1200px) {
+        font-size: 18px;
+    }
+	
  }
 
 .quizArea{
