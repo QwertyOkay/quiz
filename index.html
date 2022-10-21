@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html
+  class="modernizr-js page modernizr-no-touchevents modernizr-cssanimations modernizr-csstransitions modernizr-webp modernizr-webp-alpha modernizr-webp-animation modernizr-webp-lossless"
+  lang="en">
+
+<head>
+  <title>Quaintumai.com</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" media="all" href="./css/main.min.css?ver=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <main>
+
+  <section class="qwiz_title" id="qwizBox">
+    <div id="circle"></div>
+    <div class="boxes">
+        <div class="boxes__textBox boxes__textBox_left">
+          <p class="boxes__textBox_title">Насколько ваша компания готова к&nbsp;тому, чтобы успешно конкурировать в&nbsp;современном мире цифровых технологий? – пройдите тест прямо&nbsp;сейчас, чтобы узнать.</p>
+          <small>Всего 10 вопросов (5 минут)
+      и&nbsp;получите ответ без&nbsp;регистрации</small>
+        </div>
+        <div class="boxes__textBox boxes__textBox_right">
+          <h2>Готовы к будущему?</h2>
+          <p>Информационные технологии, искусственный интеллект, автоматизация бизнеса, электронный маркетинг, BigData, облачные сервисы –&nbsp;это уже настоящее, а&nbsp;что будет в&nbsp;будущем? 
+      Вы и ваш бизнес уже готовы?</p>
+          <button class="btn">Узнать</button>
+        </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- <script>
+    let activeAlert = false;
+    const title = "Starfirez.com - Grilling tools | Smoking | Cleaning";
+    const msg = "START YOUR GRILLING JOURNEY TODAY";
+    const changeTitle = setInterval(() => {
+      document.title = activeAlert ? title : msg;
+
+      activeAlert = !activeAlert;
+    }, 1000);
+  </script> -->
+
+  <script>
+    console.clear();
+
+var circle = document.getElementById("circle");
+var dt = 5000;
+var t = setInterval(function() { 
+  circle.setAttribute("style", "left: " + parseInt(Math.random()*(10)-40) + "%; top: " + parseInt(Math.random()*(10)-40) + "%;");
+}, dt);
+
+var dot = document.createElement("div");
+
+dot.classList.add("blueDot");
+
+var qwizBox = document.getElementById("qwizBox");
+var dots = [];
+
+class Dots {
+  
+  constructor() {
+    this.x_start = parseInt(Math.random()*20) + 15;
+    this.y_start = parseInt(Math.random()*70) + 15;
+    this.dot = dot.cloneNode();
+    this.size = parseInt(Math.random()*50) + 10;
+    this.deleteme = false;
+    
+    this.s = 5000 + parseInt(Math.random() * 10000);
+    qwizBox.appendChild(this.dot);
+    this.target = { x: parseInt(Math.random()*50+50), y: parseInt(Math.random()*(100)), time: +new Date() + this.s };
+    
+    this.draw();
+  }
+  
+  draw(i) {
+    let dt = 1 - ( this.target.time - new Date() ) / this.s;
+    let x = this.x_start + (this.target.x - this.x_start) * dt;
+    let y = this.y_start + (this.target.y - this.y_start) * dt;
+    
+    this.dot.setAttribute("style", "left:" + x + "%; top:" + y + "%; opacity:" + (1 - dt) + "; width: " + this.size + "px; height:" + this.size + "px;" );
+
+    if( +new Date() > this.target.time ) {
+      dots[i] = new Dots();
+    }
+  }
+  
+}
+
+function loop() {
+  let mustDelete = [];
+  if(dots.length < 20) {
+    dots.push(new Dots());
+  }
+  for(let i =0; i < dots.length; i++) {
+    dots[i].draw(i);
+  }
+  requestAnimationFrame(loop);
+}
+
+loop();
+  </script>
+
+
+</body>
+</html>

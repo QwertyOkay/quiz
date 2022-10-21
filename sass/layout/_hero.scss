@@ -1,0 +1,81 @@
+$blue: #00B4FF;
+$maxW: 1144px;
+
+body {
+  padding: 30px 15px;
+  margin: 0;
+  background: #f7f7f7!important;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 3rem; 
+}
+
+.blueDot {
+  background: $blue;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  width: 20px;
+  height: 20px;
+}
+
+.btn {
+  border: none;
+  background: $blue;
+  border-radius: 4px;
+  padding: 1em 2em;
+  color: #fff;
+  font: 1.2rem sans-serif;
+}
+
+section.qwiz_title {
+    min-height: 93vh;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(to top, #f7f7f7, #fbfbfb);
+    position: relative;
+    z-index: -2;
+  
+  #circle {
+    background: $blue;
+    width: 80%;
+    height: 160%;
+    position: absolute;
+    border-radius: 50%;
+    top: -30%;
+    left: calc(50% - 80%);
+    transition: 5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .boxes {
+    max-width: $maxW;
+    margin: 0 auto;
+    z-index: 0;
+    
+    &__textBox {
+      font: 1.5em sans-serif;
+      float: left;
+      box-sizing: border-box;
+      padding: 5em 3em;
+      
+        &_left {
+          width: 45%;
+          color: #fff;
+          small {
+            color: black;
+            font-size: 1rem;
+          }
+        }
+        &_right {
+          width: 55%;
+          h2 {
+            margin-top: 0.5em;
+          }
+        }
+    }    
+  }
+  
+}
