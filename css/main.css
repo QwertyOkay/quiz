@@ -298,6 +298,7 @@ u, ins {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
   margin: 0px;
   letter-spacing: normal;
 }
@@ -1016,10 +1017,8 @@ section.qwiz_title .boxes__textBox_left small {
 @media screen and (min-width: 1200px) {
   section.qwiz_title .boxes__textBox_right {
     width: 55%;
+    margin-top: -44px;
   }
-}
-section.qwiz_title .boxes__textBox_right h2 {
-  margin-top: 0.5em;
 }
 
 body {
@@ -1045,6 +1044,48 @@ body {
 .mc_quiz {
   color: #000;
   margin-bottom: 0px;
+}
+
+.boxes__h2 {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-text-stroke: 2px rgba(31, 31, 31, 0.831372549);
+}
+@media screen and (min-width: 1200px) {
+  .boxes__h2 {
+    font-size: 60px;
+    color: transparent;
+  }
+}
+
+.h2__tog {
+  text-shadow: 0 0 #fff;
+}
+@media screen and (min-width: 1200px) {
+  .h2__tog {
+    -webkit-text-stroke: 2px #00b4ff;
+    text-shadow: none;
+  }
+}
+
+.boxes__pWE {
+  margin-top: 33px;
+  color: #1f1f1f;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+@media screen and (min-width: 1200px) {
+  .boxes__pWE {
+    margin-top: 33px;
+    color: #1f1f1f;
+    font-size: large;
+    line-height: 25px;
+    text-align: center;
+  }
 }
 
 .multipleChoiceQues {

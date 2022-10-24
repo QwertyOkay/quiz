@@ -7,7 +7,7 @@
 	font-family: 'Roboto Slab', serif;
     font-size: 9px;
     @media screen and (min-width:1200px) {
-        font-size: 18px;
+        font-size: 18px; 
     }
 	
  }
@@ -22,6 +22,44 @@
 .mc_quiz{
 	color: #000;
 	margin-bottom: 0px;
+}
+
+.boxes__h2 {
+	font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: 2px #1f1f1fd4;
+	@media screen and (min-width:1200px) {
+		font-size: 60px;
+		color: transparent;
+	}
+	
+}
+
+.h2__tog {
+	// -webkit-text-stroke: 2px hsl(0deg 0% 13%);
+    text-shadow: 0 0 #fff;
+	@media screen and (min-width:1200px) {
+	-webkit-text-stroke: 2px #00b4ff;
+	text-shadow: none;
+	}
+}
+
+.boxes__pWE {
+	margin-top: 33px;
+    color: #1f1f1f;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: center;
+	font-family: "Roboto Slab",serif;
+
+	@media screen and (min-width:1200px) {
+		margin-top: 33px;
+		color: #1f1f1f;
+		font-size: large;
+		line-height: 25px;text-align: center;
+	}
 }
 
 

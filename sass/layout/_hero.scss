@@ -97,10 +97,8 @@ section.qwiz_title {
         &_right {
             @media screen and (min-width:1200px) {
           width: 55%;
+          margin-top: -44px;
             }
-          h2 {
-            margin-top: 0.5em;
-          }
         }
     }    
   }
