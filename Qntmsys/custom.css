@@ -1,0 +1,37 @@
+.lead-form{
+    padding: 20px;
+}
+.lead-form input{
+    display: block;
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 10px;
+}
+.iti.iti--allow-dropdown{
+    margin: 0 0 10px;
+    width: 100%;
+}
+.iti--separate-dial-code .iti__selected-dial-code{
+    color: #fff;
+}
+.lead-form button{
+    border: 0;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #00a1ff;
+    color: #fff;
+}
+@media screen and (max-width: 576px){
+    .navbar-top {
+        padding-top: 0;
+    }
+    .navbar{
+        padding-top: 0 !important;
+    }
+}
+@media screen and (max-width: 768px){
+    .navbar-toggler{
+        display: none !important;
+    }
+}

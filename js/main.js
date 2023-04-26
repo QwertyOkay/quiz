@@ -437,4 +437,18 @@ $(document).ready(function() {
     window.location.reload(true);
   });
 
+//   $(".resultArea").on('click',trigger("submit"),function(){
+//     window.location.reload(false);
+    
+//   });
+
+//   $(".submit-form").on('click',function(e){
+//     addClickedAnswerToResult(questions,presentIndex,clicked);
+//    $('.multipleChoiceQues').hide();
+//    $(".resultArea").show();
+//    renderResult(resultList);
+
+//  });
+  
+
 });

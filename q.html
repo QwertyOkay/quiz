@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" media="all" href="./css/main.min.css">
+  <link rel="stylesheet" media="all" href="./css/main.min.css?ver=3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,9 +71,27 @@ background: #00b4ff!important;
         </div>
   
         <div class="resultBtns">
-          <button class="viewanswer">View Answers</button>
-          <button class="viewchart">View Chart</button>
+          <!-- <button class="viewanswer">View Answers</button>
+          <button class="viewchart">View Chart</button> -->
           <button class="replay"><i class="fa fa-repeat" style="font-size:1em;"></i> <br/>Restart</button>
+          <form autocomplete="on" 
+                id="form" 
+                class="is-hidden"
+                data-modal>
+
+            <h1 class="form-q__input">Leave your email to get financial literacy recommendation checklist</h1>
+            <input type="email" 
+            autocomplete="on"
+            placeholder=" Email" 
+            class="form-q">
+            <button 
+            type="submit" 
+            class="submit-form" 
+            id="btn" 
+            data-modal-open
+            value="Click" onmousedown="viewDiv()">Submit</button>
+          </form>
+          <h1 id="h1-none" class="h1-none">Thank you! <br>Grab your checklist on email</h1>
         </div>
       </div>
   
@@ -104,9 +122,45 @@ background: #00b4ff!important;
   </footer>
 </a>
 
+<script>
+  document.getElementById("form").addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log("Form has submited");
+});
+
+document.getElementById("btn").addEventListener('click', function(e) {
+    document.getElementById("form").trigger("submit");
+
+}) 
+</script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
 <script src="https://raw.githubusercontent.com/emn178/Chart.PieceLabel.js/master/src/Chart.PieceLabel.js"></script>
   <script src="js/main.js"></script>
+
+
+  <script>
+    (() => {
+      const refs = {
+
+        openModalBtn1: document.querySelector('[data-modal-open]'),
+        modal1: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn1.addEventListener('click', toggleModal1);
+
+      function toggleModal1() {
+        refs.modal1.classList.add('hidden');
+      }
+    }
+    )();
+
+    function viewDiv(){
+  document.getElementById("h1-none").style.display = "block";
+};
+
+  </script>
+
 </body>

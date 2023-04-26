@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --animate-duration: 2000ms;
+    --animate-delay: 1s;
+}
+
+#hero_header {
+    background-image: url(../images/headerback.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#countdown {
+    background-color: #041834;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    padding: 15px 0;
+}
+
+.coutdownText {
+    float: left;
+    width: 46%;
+    margin: 0 2%;
+    padding-top: 10px;
+}
+
+.timerandButtn {
+    float: right;
+    width: 46%;
+    margin: 0 2%;
+    padding: 0 20px;
+}
+
+.timer_minutes {
+    padding: 0 30px;
+}
+
+.timerandButtn,
+.timer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.timer h5 {
+    margin-bottom: 0;
+}
+
+#countdown h4 {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#00A5FF, #8BCBEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#countdown h5,
+#countdown span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    /* background-color: #9D84FF; */
+    /* background: linear-gradient(180deg, #3300FF 0%, #EE8BEA 135.66%); */
+    background: linear-gradient(180deg, #20CACA 0%, #15AF6F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.try_btn button {
+    border-style: none;
+    border-radius: 100px;
+    width: 137px;
+    height: 44px;
+    background: rgba(54, 73, 113, 0.38);
+    border: 1.5px solid #00A5FF;
+    box-sizing: border-box;
+    border-radius: 22px;
+}
+
+#watchtime {
+    width: 280px;
+    height: 53px;
+    background: linear-gradient(245.48deg, #0A2858 -31.02%, rgba(15, 40, 80, 0) 114.37%);
+    border: 2px dashed rgba(0, 165, 255, 0.12);
+    box-sizing: border-box;
+    border-radius: 6.728px;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    z-index: 9999;
+}
+
+#watchtime .all_h6 {
+    margin: 2px 0 0 0px;
+}
+
+div.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #00A1FF;
+}
+
+.navbar-top {
+    padding-top: 30px;
+}
+
+.fas {
+    color: #14AAFC;
+    outline: none;
+    border-style: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-nav li a {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #D7D8FF;
+}
+
+.navbar-nav li a:focus,
+.navbar-nav li a:active,
+.navbar-nav li a:hover {
+    border-bottom: 2px solid #10A9FD;
+    padding: 0;
+}
+
+.form_heading .all_h3 {
+    margin-left: 35px;
+    padding-bottom: 10px;
+}
+
+.register_form {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 7.43784px;
+}
+
+.input-group {
+    flex-wrap: wrap!important;
+}
+
+.invalid-feedback {
+    flex-basis: 100%!important;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=phone] {
+    color: #ffffff;
+    background: rgba(14, 27, 62, 0.48);
+    border-radius: 5.57838px;
+    border-style: none;
+}
+
+.form_button button {
+    background-color: #1BBAFF;
+    border-radius: 7px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.8757px;
+    line-height: 150%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #00131B;
+}
+
+.form_button button:hover {
+    background-color: #0278aa;
+}
+
+.features-box .all_h5 {
+    padding-top: 10px;
+}
+
+.create_acc_des,
+.stockshare_des,
+.download_app_des {
+    position: relative;
+    top: 30%;
+}
+
+.automated_system .all_h2,
+.automated_system .all_p {
+    padding: 0 60px
+}
+
+.download_app_des {
+    padding: 0 60px 0 0;
+}
+
+#account_sec {
+    background-image: url(../images/bg2.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#stockPortfolio_sec {
+    background-image: url(../images/bg3.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#applicationAndMedia {
+    background-image: url(../images/bg4.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footer {
+    background-image: url(../images/bg5.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* all img */
+
+.graph_img {
+    margin-top: 70px;
+}
+
+.header_video video {
+    border-radius: 8px;
+    width: 96%;
+}
+
+.media_img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.stockshare_img img {
+    position: relative;
+    top: 0;
+    left: 150px;
+}
+
+.media_logo {
+    flex: 0 1;
+    padding: 0 20px;
+}
+
+.automated_img {
+    margin: 0 0 0 65px;
+}
+
+
+/* ---stored value classes----- */
+
+.hero_heading h1 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-shadow: 0px 0px 79px #000000;
+    background: -webkit-linear-gradient(#00A5FF, #8BCBEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.all_h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    font-style: normal;
+    color: #D7D8FF;
+    line-height: 150%;
+}
+
+.all_p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #D8D8EC;
+}
+
+.inside_h2 {
+    color: #00A5FF;
+}
+
+.portfolio_p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #8C8DB8;
+}
+
+.all_h4 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #D7D8FF;
+}
+
+.all_h3 {
+    color: #D7D8FF;
+    ;
+}
+
+.all_h5 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #52C1FF;
+}
+
+.all_h6 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #00A1FF;
+}
+
+#footer .all_h2 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 150%;
+    /* identical to box height, or 54px */
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #D7D8FF;
+}
+
+.form_span {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-shadow: 0px 0px 73.4486px #000000;
+    background: -webkit-linear-gradient(#00A5FF, #8BCBEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ----media Carousel------- */
+
+.media_carousel_sec {
+    display: none;
+}
+
+.portfolio_carousel_sec {
+    display: none;
+}
+
+
+/* responsive here */
+
+@media screen and (max-width:576px) {
+    .navbar-collapse {
+        background: linear-gradient(245.48deg, #0A2858 -31.02%, rgba(15, 40, 80, 0) 114.37%);
+        border: 0.932px dashed rgba(0, 165, 255, 0.12);
+    }
+    .navbar-top {
+        padding-top: 40px;
+    }
+    #countdown h4 {
+        font-size: 13px;
+    }
+    #countdown h5 {
+        margin-top: 6px;
+        font-size: 15px;
+    }
+    #countdown span {
+        font-size: 13px;
+    }
+    .coutdownText {
+        width: 35%;
+        margin: 0 2%;
+    }
+    .timerandButtn {
+        width: 60%;
+        padding: 0 0px;
+    }
+    .timerandButtn {
+        margin: 0 0;
+    }
+    .timer_minutes {
+        padding: 0 10px;
+    }
+    .try_btn button {
+        width: 70px;
+        height: 35px;
+        font-size: 10px;
+        margin: 12px 0 0 3px;
+    }
+    #watchtime {
+        width: 280px;
+        height: 40px;
+        left: 5px;
+        bottom: 5px;
+    }
+    #watchtime .all_h6 {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: -0.5px;
+    }
+    div.dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 100%;
+        background-color: #00A1FF;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+    .hero_heading h1 {
+        font-size: 25px;
+    }
+    
+    .automated_img {
+        margin: 0 auto;
+    }
+    .graph_img {
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .register_form {
+        width: 100%;
+    }
+    .form_heading {
+        margin: 10px 0 20px 10px;
+    }
+    .register_form form {
+        padding: 0 30px;
+    }
+    .features-box {
+        padding: 20px 0;
+        margin: 0 20px;
+    }
+    .features-box img {
+        padding-bottom: 10px;
+    }
+    .account_featues,
+    .automated_system,
+    .create_acc_des,
+    .stockshare_des,
+    .download_app_des {
+        padding: 0 10px;
+    }
+    .automated_system .all_h2,
+    .automated_system .all_p {
+        padding: 0 0;
+    }
+    .stockshare_img img {
+        padding: 80px 0 0 10px;
+    }
+    .stockshare_img img {
+        position: relative;
+        top: 0;
+        left: 20px;
+    }
+    .create_acc_des,
+    .download_app {
+        padding-top: 40px;
+    }
+    .download_app_img {
+        padding: 80px 0 0 8px;
+    }
+    .create_acc_des .all_p {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #footer .all_h2 {
+        font-size: 24px;
+    }
+    /* --------- */
+    .all_h2 {
+        font-size: 22px;
+    }
+    .all_p {
+        font-size: 13px;
+    }
+    .all_h4 {
+        font-size: 16px;
+    }
+    .all_h5 {
+        font-size: 16px;
+    }
+    .all_h6 {
+        font-size: 8px;
+        margin: -2px 0 0 8px;
+    }
+    .media_img img {
+        padding: 10px 30px;
+    }
+    /* ---------- */
+    #footer .try_btn button {
+        width: 150px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 12px 0 0 3px;
+    }
+    /* ---portfolio carousel section--- */
+    .Portfoliostock {
+        display: none;
+    }
+    .portfolio_carousel_sec {
+        display: block;
+    }
+    /* ----Portfolio carousel Item----- */
+}
